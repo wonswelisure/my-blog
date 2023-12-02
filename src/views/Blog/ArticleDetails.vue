@@ -2,7 +2,7 @@
  * @Author: wangbing wangbing
  * @Date: 2023-09-20 16:50:44
  * @LastEditors: wangbing wangbing
- * @LastEditTime: 2023-11-28 15:16:35
+ * @LastEditTime: 2023-12-02 10:53:37
  * @FilePath: \myblog\src\views\Blog\ArticleDetails.vue
  * @Description: 
  * 
@@ -24,30 +24,36 @@
   </div>
 </template>
 
-<script>
-import CatalogCard from '../../components/CatalogCard.vue'
-import { reactive } from 'vue'
-export default {
-  components: {
-    CatalogCard: CatalogCard
-  },
-  name: 'ArticleDetails',
-  setup(props) {
-    window.scrollTo({ top: 0 })
+<script lang="ts" setup>
+import { reactive,defineProps } from 'vue'
+const articleDetails = reactive({
+  createTime: '',
+  content: ''
+})
+const props = defineProps({
+  
+})
+// export default {
+//   components: {
+//     CatalogCard: CatalogCard
+//   },
+//   name: 'ArticleDetails',
+//   setup(props) {
+//     window.scrollTo({ top: 0 })
 
-    // 获取文章内容
+//     // 获取文章内容
 
-    let articleDetails = reactive({
-      createTime: '',
-      content: ''
-    })
+//     let articleDetails = reactive({
+//       createTime: '',
+//       content: ''
+//     })
 
-    return {
-      articleDetails
-    }
-  },
-  props: ['id']
-}
+//     return {
+//       articleDetails
+//     }
+//   },
+//   props: ['id']
+// }
 </script>
 
 <style scoped>
