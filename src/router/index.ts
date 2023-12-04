@@ -2,7 +2,7 @@
  * @Author: wangbing wangbing
  * @Date: 2023-08-04 11:37:04
  * @LastEditors: wangbing wangbing
- * @LastEditTime: 2023-12-02 11:34:31
+ * @LastEditTime: 2023-12-04 17:08:35
  * @FilePath: \myblog\src\router\index.ts
  * @Description: 
  * 
@@ -10,7 +10,7 @@
  */
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Layout from '@/layouts/index.vue'
+import Layout from '@/layout/index.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -25,8 +25,8 @@ const router = createRouter({
       component: () => import('../views/404.vue')
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/test',
+      name: 'test',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -34,9 +34,9 @@ const router = createRouter({
       redirect: '/home/index',
       children: [
         {
-          path: '/FirstPage',
-          name: 'FirstPage',
-          component: () => import('../views/FirstPage.vue'),
+          path: '/about',
+          name: 'about',
+          component: () => import('../views/AboutView.vue'),
           meta: { title: '状态监控', icon: 'dashboard' }
         }
       ]
@@ -50,11 +50,11 @@ const router = createRouter({
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/AboutView.vue')
     // },
-    {
-      path: '/FirstPage',
-      name: 'FirstPage',
-      component: () => import('../views/FirstPage.vue')
-    },
+    // {
+    //   path: '/FirstPage',
+    //   name: 'FirstPage',
+    //   component: () => import('../views/FirstPage.vue')
+    // },
     {
       path: '/ArticleDetails',
       name: 'ArticleDetails',

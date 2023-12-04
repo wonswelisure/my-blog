@@ -1,0 +1,19 @@
+// sidebar
+$menuText: #34475e;
+$menuActiveText: #999;
+$subMenuActiveText: #5f7cba; 
+$menuBg: #304156;
+$menuHover: #eee;
+$subMenuBg: transparent;
+$subMenuHover: #eee;
+$sideBarWidth: 240px;
+:export {
+	menuText: $menuText;
+	menuActiveText: $menuActiveText;
+	subMenuActiveText: $subMenuActiveText;
+	menuBg: $menuBg;
+	menuHover: $menuHover;
+	subMenuBg: $subMenuBg;
+	subMenuHover: $subMenuHover;
+	sideBarWidth: $sideBarWidth;
+}
