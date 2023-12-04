@@ -2,8 +2,8 @@
  * @Author: wangbing wangbing
  * @Date: 2023-11-30 15:44:25
  * @LastEditors: wangbing wangbing
- * @LastEditTime: 2023-12-02 17:20:47
- * @FilePath: \myblog\src\layouts\index.vue
+ * @LastEditTime: 2023-12-04 16:51:39
+ * @FilePath: \myblog\src\layout\index.vue
  * @Description: 
  * 
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
@@ -42,9 +42,12 @@
 </template>
 
 <script setup lang="ts">
+import navbar from './component/Navbar.vue'
+import AppMain from './component/AppMain.vue'
+import sidebar from './component/Sidebar/index.vue'
 import { reactive, ref } from 'vue'
 const openTab = reactive([
-  { name: '首页', route: '/statusMonitor/main' },
+  { name: '首页', route: '/FirstPage' },
   { name: '用户', route: '/main/user' },
   { name: '欢迎', route: '/main/welcome' }
 ])
@@ -58,10 +61,28 @@ const toggleNavStatus = () => {
   alert(2)
 }
 const navStatus = ref(false)
+// defineComponent({
+//   name: 'Layout',
+//   components: {}
+// })
 </script>
 
 <style lang="scss" scoped>
 .app-wrapper {
-  background-color: red;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  &.mobile.openSidebar {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.main-container-content {
+	flex: 1;
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	// padding: 30px;
 }
 </style>

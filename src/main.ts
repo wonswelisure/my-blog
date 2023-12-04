@@ -1,3 +1,13 @@
+/*
+ * @Author: wangbing wangbing
+ * @Date: 2023-08-04 11:37:04
+ * @LastEditors: wangbing wangbing
+ * @LastEditTime: 2023-12-04 16:47:23
+ * @FilePath: \myblog\src\main.ts
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
+ */
 import './assets/main.css'
 
 import { createApp } from 'vue'
@@ -7,6 +17,7 @@ import './permission'//权限
 import App from './App.vue'
 import router from './router'
 import jquery from 'jquery'
+import '@/styles/index.scss'
 // 导入 element-plus
 import ElementPlus from "element-plus";
 // 导入 element-plus 样式
