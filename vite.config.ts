@@ -1,7 +1,7 @@
 /*
- * @Author: wangbing wangbing
+ * @Author: wosls
  * @Date: 2023-08-04 11:37:04
- * @LastEditors: wangbing wangbing
+ * @LastEditors: wosls
  * @LastEditTime: 2023-11-30 16:15:57
  * @FilePath: \myblog\vite.config.ts
  * @Description: 

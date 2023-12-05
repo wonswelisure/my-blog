@@ -1,8 +1,8 @@
 <!--
- * @Author: wangbing wangbing
+ * @Author: wosls
  * @Date: 2023-11-30 17:42:39
- * @LastEditors: wangbing wangbing
- * @LastEditTime: 2023-12-04 17:24:32
+ * @LastEditors: wosls
+ * @LastEditTime: 2023-12-05 10:59:47
  * @FilePath: \myblog\src\layout\component\Sidebar\index.vue
  * @Description: 
  * 
@@ -26,6 +26,7 @@
       >
         <el-sub-menu v-for="(item, index) in menuList" :key="index" :index="item.id + ''">
           <template #title>
+            <!-- render element plus icon from data -->
             <el-icon> <component :is="item.icon" /></el-icon>
             <span>{{ item.name }}</span>
           </template>

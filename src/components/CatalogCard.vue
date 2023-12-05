@@ -1,7 +1,7 @@
 <!--
- * @Author: wangbing wangbing
+ * @Author: wosls
  * @Date: 2023-10-09 15:41:07
- * @LastEditors: wangbing wangbing
+ * @LastEditors: wosls
  * @LastEditTime: 2023-11-24 15:02:17
  * @FilePath: \myblog\src\components\CatalogCard.vue
  * @Description: 
