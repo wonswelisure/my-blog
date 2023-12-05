@@ -1,7 +1,7 @@
 <!--
- * @Author: wangbing wangbing
+ * @Author: wosls
  * @Date: 2023-09-20 16:50:44
- * @LastEditors: wangbing wangbing
+ * @LastEditors: wosls
  * @LastEditTime: 2023-12-02 10:53:37
  * @FilePath: \myblog\src\views\Blog\ArticleDetails.vue
  * @Description: 

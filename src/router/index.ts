@@ -2,7 +2,17 @@
  * @Author: wangbing wangbing
  * @Date: 2023-08-04 11:37:04
  * @LastEditors: wangbing wangbing
- * @LastEditTime: 2023-12-04 17:08:35
+ * @LastEditTime: 2023-12-05 11:22:20
+ * @FilePath: \myblog\src\router\index.ts
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
+ */
+/*
+ * @Author: wosls
+ * @Date: 2023-08-04 11:37:04
+ * @LastEditors: wangbing wangbing
+ * @LastEditTime: 2023-12-05 11:16:23
  * @FilePath: \myblog\src\router\index.ts
  * @Description: 
  * 
@@ -11,6 +21,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Layout from '@/layout/index.vue'
+import picture from './modules/picture'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -24,30 +35,24 @@ const router = createRouter({
       name: '404',
       component: () => import('../views/404.vue')
     },
-    {
-      path: '/test',
-      name: 'test',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: Layout,
-      redirect: '/home/index',
-      children: [
-        {
-          path: '/about',
-          name: 'about',
-          component: () => import('../views/AboutView.vue'),
-          meta: { title: '状态监控', icon: 'dashboard' }
-        }
-      ]
-    }, 
-
+    // {
+    //   path: '/wosls',
+    //   component: Layout,
+    //   children: [
+    //     {
+    //       path: '/wosls/about',
+    //       component: () => import('../views/AboutView.vue'),
+    //     },
+    //     {
+    //       path: '/wosls/main',
+    //       component: () => import('../views/HomeView.vue'),
+    //     }
+    //   ]
+    // },
+    picture,
     // {
     //   path: '/about',
     //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/AboutView.vue')
     // },
     // {
@@ -60,7 +65,7 @@ const router = createRouter({
       name: 'ArticleDetails',
       component: () => import('../views/Blog/ArticleDetails.vue')
     },
-    
+
   ]
 })
 

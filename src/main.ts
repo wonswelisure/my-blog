@@ -1,7 +1,7 @@
 /*
- * @Author: wangbing wangbing
+ * @Author: wosls
  * @Date: 2023-08-04 11:37:04
- * @LastEditors: wangbing wangbing
+ * @LastEditors: wosls
  * @LastEditTime: 2023-12-04 16:47:23
  * @FilePath: \myblog\src\main.ts
  * @Description: 

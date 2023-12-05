@@ -1,7 +1,7 @@
 <!--
- * @Author: wangbing wangbing
+ * @Author: wosls
  * @Date: 2023-11-30 17:42:39
- * @LastEditors: wangbing wangbing
+ * @LastEditors: wosls
  * @LastEditTime: 2023-12-04 17:15:12
  * @FilePath: \myblog\src\layout\component\AppMain.vue
  * @Description: 
@@ -22,9 +22,12 @@
       >
         <template v-for="item in openTab" :key="item.route">
           <el-tab-pane :label="item.name" :name="item.route">
-            <span v-if="item.route === '/about'">
-              <el-icon><HomeFilled /></el-icon>
-            </span>
+            <template #label v-if="item.route === '/about'">
+              <span class="custom-tabs-label">
+                <el-icon><HomeFilled /></el-icon>
+                <span>{{ item.name }}</span>
+              </span>
+            </template>
           </el-tab-pane>
         </template>
       </el-tabs>

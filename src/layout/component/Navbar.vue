@@ -1,7 +1,7 @@
 <!--
- * @Author: wangbing wangbing
+ * @Author: wosls
  * @Date: 2023-12-02 17:36:35
- * @LastEditors: wangbing wangbing
+ * @LastEditors: wosls
  * @LastEditTime: 2023-12-02 17:39:31
  * @FilePath: \myblog\src\layouts\component\Navbar.vue
  * @Description: 
