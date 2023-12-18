@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-08-04 11:37:04
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-04 16:47:23
+ * @LastEditTime: 2023-12-18 10:17:33
  * @FilePath: \myblog\src\main.ts
  * @Description: 
  * 
@@ -29,11 +29,11 @@ import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 // 创建 vue 实例
 const app = createApp(App)
 
+
 app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
-
 
 
 

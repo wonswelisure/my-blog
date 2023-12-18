@@ -1,0 +1,19 @@
+<template>
+  <div class="container"></div>
+</template>
+
+<script>
+export default {
+  name: 'RecommendCard'
+}
+</script>
+
+<style lang="scss" scoped>
+.container {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: aqua;
+}
+</style>

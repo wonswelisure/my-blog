@@ -1,8 +1,8 @@
 /*
  * @Author: wangbing wangbing
  * @Date: 2023-08-04 11:37:04
- * @LastEditors: wangbing wangbing
- * @LastEditTime: 2023-12-05 11:22:20
+ * @LastEditors: wosls
+ * @LastEditTime: 2023-12-18 15:40:34
  * @FilePath: \myblog\src\router\index.ts
  * @Description: 
  * 
@@ -55,17 +55,22 @@ const router = createRouter({
     //   name: 'about',
     //   component: () => import('../views/AboutView.vue')
     // },
-    // {
-    //   path: '/FirstPage',
-    //   name: 'FirstPage',
-    //   component: () => import('../views/FirstPage.vue')
-    // },
     {
-      path: '/ArticleDetails',
-      name: 'ArticleDetails',
-      component: () => import('../views/Blog/ArticleDetails.vue')
+      path: '/MainPage',
+      name: 'MainPage',
+      component: () => import('../views/MainPage.vue')
     },
-
+    {
+      path: '/blog/ArticleDetails',
+      name: 'ArticleDetails',
+      component: () => import('../views/content/ArticleDetails.vue')
+    },
+    {
+      path: '/blog/ArticleList',
+      name: 'ArticleDetails',
+      component: () => import('../views/content/blog/ArticleList.vue')
+    },
+    
   ]
 })
 

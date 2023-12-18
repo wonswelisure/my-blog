@@ -2,3 +2,26 @@
 @import './mixin.scss';
 // @import './element-ui.scss';
 @import './sidebar.scss';
+
+html,
+body,
+#app {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    height: 15px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(153, 153, 153, 0.8);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
