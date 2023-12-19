@@ -15,8 +15,7 @@ export default {
 
 <style lang="scss" scoped>
 #side-bar {
-    width: 26%;
-    margin-right: 20px;
+    width: 20%;
 }
 
 @media screen and (max-width: 900px) {

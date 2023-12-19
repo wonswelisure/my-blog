@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-10-09 15:41:07
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-18 15:12:25
+ * @LastEditTime: 2023-12-19 18:10:12
  * @FilePath: \myblog\src\components\CatalogCard.vue
  * @Description: 
  * 
@@ -17,7 +17,7 @@
                         :icon="['fas', 'bars-staggered']"
                         class="catalog-icon"
                 /></span> -->
-        <span>目录</span>
+        <span>大纲</span>
       </div>
       <span class="progress">{{ progress }}</span>
     </div>
@@ -198,12 +198,9 @@ onMounted(() => {
 <style scoped>
 .catalog-card {
   background: white;
-  border-radius: 8px;
-  box-shadow: var(--card-box-shadow);
+  border-left: 1px solid #DADCE0;
   padding: 20px 24px;
   width: 100%;
-  margin-top: 25px;
-  box-sizing: border-box;
 }
 
 .catalog-card-header {

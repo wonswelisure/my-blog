@@ -123,7 +123,9 @@ onMounted(() => {
       <p><a href="about:blank" target="_blank">
           <RouterLink to="/blog/ArticleList">CSDN</RouterLink>
         </a></p>
-      <p><a href="about:blank" target="_blank">Github</a></p>
+      <p><a href="about:blank" target="_blank">
+          <RouterLink to="/blog/ArticleEdit">github</RouterLink>
+        </a></p>
       <p><a href="about:blank" target="_blank">简历</a></p>
       <p><a href="about:blank" target="_blank">知乎</a></p>
       <p><a href="about:blank" target="_blank">FootPrints</a></p>
