@@ -89,7 +89,7 @@ onMounted(() => {
       sync: false,
       shuffle: true,
       reverse: false,
-      callback: function () {}
+      callback: function () { }
     }
   })
 })
@@ -116,9 +116,13 @@ onMounted(() => {
       <h3 class="named">William</h3>
       <h2>Ideas, Binary & Enthusiasm === Better</h2>
       <p>
-        <a href="about:blank" target="_blank"><RouterLink to="/ArticleDetails">Blog</RouterLink></a>
+        <a href="about:blank" target="_blank">
+          <RouterLink to="/blog/ArticleDetails">Blog</RouterLink>
+        </a>
       </p>
-      <p><a href="about:blank" target="_blank">CSDN</a></p>
+      <p><a href="about:blank" target="_blank">
+          <RouterLink to="/blog/ArticleList">CSDN</RouterLink>
+        </a></p>
       <p><a href="about:blank" target="_blank">Github</a></p>
       <p><a href="about:blank" target="_blank">简历</a></p>
       <p><a href="about:blank" target="_blank">知乎</a></p>
@@ -190,6 +194,7 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
+
 #wrapper {
   position: absolute;
   left: 0;
@@ -204,6 +209,7 @@ nav a:first-of-type {
   -moz-user-select: none;
   user-select: none;
 }
+
 h1 {
   font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 400;
@@ -254,5 +260,4 @@ a {
 
 a:hover {
   color: #0000cc;
-}
-</style>
+}</style>

@@ -47,7 +47,7 @@ import AppMain from './component/AppMain.vue'
 import sidebar from './component/Sidebar/index.vue'
 import { reactive, ref } from 'vue'
 const openTab = reactive([
-  { name: '首页', route: '/FirstPage' },
+  { name: '首页', route: '/MainPage' },
   { name: '用户', route: '/main/user' },
   { name: '欢迎', route: '/main/welcome' }
 ])
