@@ -2,7 +2,7 @@
  * @Author: wangbing wangbing
  * @Date: 2023-08-04 11:37:04
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-18 15:40:34
+ * @LastEditTime: 2023-12-19 16:05:06
  * @FilePath: \myblog\src\router\index.ts
  * @Description: 
  * 
@@ -67,10 +67,15 @@ const router = createRouter({
     },
     {
       path: '/blog/ArticleList',
-      name: 'ArticleDetails',
+      name: 'ArticleList',
       component: () => import('../views/content/blog/ArticleList.vue')
     },
-    
+    {
+      path: '/blog/ArticleEdit',
+      name: 'ArticleEdit',
+      component: () => import('../views/content/blog/ArticleEdit.vue')
+    },
+
   ]
 })
 

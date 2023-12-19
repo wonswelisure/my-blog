@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-08-04 11:37:04
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-18 10:17:33
+ * @LastEditTime: 2023-12-19 17:17:20
  * @FilePath: \myblog\src\main.ts
  * @Description: 
  * 
@@ -18,22 +18,22 @@ import App from './App.vue'
 import router from './router'
 import jquery from 'jquery'
 import '@/styles/index.scss'
+import "mavon-editor/dist/css/index.css";
 // 导入 element-plus
 import ElementPlus from "element-plus";
 // 导入 element-plus 样式
 import "element-plus/dist/index.css";
 // 导入 element-plus 图标
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
+import mavonEditor from "mavon-editor";
 // // 导入全局样式
 // import "@/styles/index.scss";
 // 创建 vue 实例
 const app = createApp(App)
-
-
 app.use(createPinia())
-app.use(router)
-
-app.mount('#app')
+    .use(router)
+    .use(mavonEditor)
+    .mount('#app')
 
 
 

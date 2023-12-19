@@ -2,8 +2,8 @@
  * @Author: wosls
  * @Date: 2023-09-20 16:50:44
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-18 14:59:08
- * @FilePath: \myblog\src\views\Blog\ArticleDetails.vue
+ * @LastEditTime: 2023-12-19 18:04:18
+ * @FilePath: \myblog\src\views\content\ArticleDetails.vue
  * @Description: 
  * 
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
@@ -25,6 +25,7 @@
       </side-bar>
     </div>
     <blog-footer></blog-footer>
+    <to-top></to-top>
   </div>
 </template>
 
@@ -34,6 +35,7 @@ import CatalogCard from '../../components/CatalogCard.vue'
 import RecommendCard from '../components/RecommendCard.vue'
 import BlogHeader from '../components/BlogHeader.vue'
 import BlogFooter from '../components/BlogFooter.vue'
+import ToTop from '../components/ToTop.vue'
 import SideBar from '../components/SideBar.vue'
 import { renderByMathjax, initMathJax } from '../../utils/mathjax'
 // import buildCodeBlock from "../../utils/code-block";
@@ -244,18 +246,20 @@ onMounted(() => {
   width: 100%;
   position: absolute;
 }
+
 .container {
   display: flex;
   justify-content: space-between;
 }
+
 .sticky-layout {
   width: 100%;
   height: 300px;
   position: sticky;
-  top: 20px;
+  top: 70px;
 }
+
 .post-body {
   width: calc(75% - 20px);
   padding: 0 20px 0 50px;
-}
-</style>
+}</style>
