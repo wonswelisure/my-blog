@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-09-20 16:50:44
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-19 18:04:18
+ * @LastEditTime: 2023-12-20 16:52:03
  * @FilePath: \myblog\src\views\content\ArticleDetails.vue
  * @Description: 
  * 
@@ -21,10 +21,11 @@
         <div class="sticky-layout">
           <catalog-card></catalog-card>
           <recommend-card></recommend-card>
+          <blog-footer></blog-footer>
         </div>
       </side-bar>
     </div>
-    <blog-footer></blog-footer>
+    <comment-content></comment-content>
     <to-top></to-top>
   </div>
 </template>
@@ -35,6 +36,7 @@ import CatalogCard from '../../components/CatalogCard.vue'
 import RecommendCard from '../components/RecommendCard.vue'
 import BlogHeader from '../components/BlogHeader.vue'
 import BlogFooter from '../components/BlogFooter.vue'
+import CommentContent from '../components/CommentContent.vue'
 import ToTop from '../components/ToTop.vue'
 import SideBar from '../components/SideBar.vue'
 import { renderByMathjax, initMathJax } from '../../utils/mathjax'
@@ -262,4 +264,5 @@ onMounted(() => {
 .post-body {
   width: calc(75% - 20px);
   padding: 0 20px 0 50px;
-}</style>
+}
+</style>

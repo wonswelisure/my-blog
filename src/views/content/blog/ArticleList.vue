@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-09-20 16:50:44
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-18 15:58:19
+ * @LastEditTime: 2023-12-20 16:31:11
  * @FilePath: \myblog\src\views\content\blog\ArticleList.vue
  * @Description: 
  * 
@@ -14,33 +14,26 @@
         <div class="list-container">
 
         </div>
-        <blog-footer></blog-footer>
+
     </div>
 </template>
   
 <script lang="ts" setup>
 import { onMounted } from 'vue'
-
 import BlogHeader from '../../components/BlogHeader.vue'
-import BlogFooter from '../../components/BlogFooter.vue'
-
-
-onMounted(() => {
-
-})
+onMounted(() => {})
 </script>
-  
+
 <style scoped>
 #article-details {
     display: flex;
     /* align-items: center; */
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .list-container {
-    width: 90%;
+    width: 70%;
     height: 900px;
     margin: 10px 0 10px 0;
     background-color: blueviolet;
