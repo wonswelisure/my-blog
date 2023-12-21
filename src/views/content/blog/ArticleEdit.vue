@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-12-19 15:33:52
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-19 17:37:50
+ * @LastEditTime: 2023-12-21 15:53:58
  * @FilePath: \myblog\src\views\content\blog\ArticleEdit.vue
  * @Description: 
  * 
@@ -11,7 +11,10 @@
 <template>
     <div class="editor">
         <blog-header></blog-header>
-        <mavon-editor :toolbars="markdownOption" v-model="handbook"></mavon-editor>
+        <div class="mavonEditor">
+            <mavon-editor :toolbars="markdownOption" v-model="handbook"></mavon-editor>
+        </div>
+
     </div>
 </template>
 <script setup lang="ts">
@@ -53,9 +56,15 @@ const markdownOption = reactive({
     preview: true, // 预览
 })
 let handbook = ref("")
+// window.addEventListener('keydown',e => {
+//     if(e.key==='s'){
+//         alert('保存')
+//     }
+// })
+
 onMounted(() => { })
 </script>
-<style>
+<style lang="scss" scoped>
 .editor {
     width: 100%;
     height: 100vh;
@@ -64,6 +73,12 @@ onMounted(() => { })
 
 .mavonEditor {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 70px);
+
+    ::v-deep(.markdown-body) {
+        height: 100% !important;
+        box-shadow: none !important;
+    }
+
 }
 </style>
