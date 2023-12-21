@@ -1,6 +1,8 @@
 <template>
   <div class="header">
-    <div class="left"></div>
+    <div class="left">
+      <div class="logo" @click="toHome">wosls</div>
+    </div>
     <div class="right">
       <el-button icon="Plus" type="success" text bg @click="add">发布</el-button>
       <div class="user" @click="toMain"></div>
@@ -17,9 +19,14 @@ const add = () => {
 
 }
 const toMain = () => {
-  router.push({ path: '/blog/ArticleList', query: { type: 'book' } })
+  router.push({ path: '/MainPage', query: { type: 'tomain' } })
 
 }
+const toHome = () => {
+  router.push({ path: '/blog/ArticleList', query: { type: 'tohome' } })
+
+}
+
 </script>
 
 <style lang="scss" scoped>
@@ -37,7 +44,17 @@ const toMain = () => {
   backdrop-filter: saturate(50%) blur(4px);
   z-index: 1;
 
-  .left {}
+  .left {
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      padding: 0 0 0 25px;
+      font-family: serif;
+      color: hsl(221, 86%, 6%);
+      line-height: 69px;
+      cursor: pointer;
+    }
+  }
 
   .right {
     padding: 0 20px 0 0;

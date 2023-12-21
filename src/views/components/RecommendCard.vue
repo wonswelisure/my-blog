@@ -1,6 +1,9 @@
 <template>
   <div class="topicle">
-    <div class="hr"></div>
+
+    <el-divider>
+      <el-icon><star-filled /></el-icon>
+    </el-divider>
     <div id="asideHotArticle" class="aside-box">
       <h3 class="aside-title">热门内容</h3>
       <div class="aside-content">
@@ -44,14 +47,6 @@ const topList = reactive([
   height: 300px;
   padding: 0 16px 0 16px;
   background-color: #fff;
-
-  .hr {
-    width: 100%;
-    display: block;
-    height: 1px;
-    margin-bottom: 7px;
-    background-color: #DADCE0;
-  }
 
   .aside-box {
     ul {
