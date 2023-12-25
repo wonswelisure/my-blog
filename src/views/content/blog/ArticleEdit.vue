@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-12-19 15:33:52
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-21 15:53:58
+ * @LastEditTime: 2023-12-25 15:16:13
  * @FilePath: \myblog\src\views\content\blog\ArticleEdit.vue
  * @Description: 
  * 
@@ -12,9 +12,30 @@
     <div class="editor">
         <blog-header></blog-header>
         <div class="mavonEditor">
-            <mavon-editor :toolbars="markdownOption" v-model="handbook"></mavon-editor>
-        </div>
+            <mavon-editor :toolbars="markdownOption" v-model="handbook">
+                <!-- 引用模板的自定义按钮 -->
+                <template v-slot:right-toolbar-before>
+                    <!--点击按钮触发的事件是打开模板选择对话框-->
+                    <el-button type="text" @click="dialogVisible = true" aria-hidden="true" class="op-icon fa" title="使用模板">
+                        <el-icon :size="16" color="#757575">
+                            <DocumentCopy />
+                        </el-icon>
+                    </el-button>
 
+                </template>
+            </mavon-editor>
+        </div>
+        <el-dialog v-model="dialogVisible" title="Tips" width="50%" :before-close="handleClose">
+            <span>这是一些模板</span>
+            <template #footer>
+                <span class="dialog-footer">
+                    <el-button @click="dialogVisible = false">取消</el-button>
+                    <el-button type="primary" @click="dialogVisible = false">
+                        确定
+                    </el-button>
+                </span>
+            </template>
+        </el-dialog>
     </div>
 </template>
 <script setup lang="ts">
@@ -56,12 +77,17 @@ const markdownOption = reactive({
     preview: true, // 预览
 })
 let handbook = ref("")
+
+const dialogVisible = ref(false)
+
 // window.addEventListener('keydown',e => {
 //     if(e.key==='s'){
 //         alert('保存')
 //     }
 // })
+const handleClose = () => {
 
+}
 onMounted(() => { })
 </script>
 <style lang="scss" scoped>

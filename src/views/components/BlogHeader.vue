@@ -5,20 +5,61 @@
     </div>
     <div class="right">
       <el-button icon="Plus" type="success" text bg @click="add">发布</el-button>
-      <div class="user" @click="toMain"></div>
+      <!-- <el-button v-popover="popoverRef" v-click-outside="onClickOutside">Click me</el-button> -->
+
+      <el-popover ref="popoverRef" trigger="click" virtual-triggering persistent>
+        <template v-for="item in unList">
+          <div class="use-list" @click="toMain(item.type)">
+            <el-icon>
+              <component :is="item.icon" />
+            </el-icon>
+            <span class="description">{{ item.name }}</span>
+          </div>
+        </template>
+
+      </el-popover>
+      <div class="user" v-popover="popoverRef" v-click-outside="onClickOutside"></div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { ref, unref, reactive } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import { ClickOutside as vClickOutside } from 'element-plus'
 const router = useRouter()
 const route = useRoute()
+const buttonRef = ref()
+const popoverRef = ref()
+const unList = reactive([
+  {
+    id: '1',
+    name: '个人中心',
+    type: 'User',
+    icon: 'UserFilled',
+  },
+  {
+    id: '2',
+    name: '内容管理',
+    type: 'center',
+    icon: 'Management',
+  },
+  {
+    id: '3',
+    name: '其他管理',
+    type: 'center',
+    icon: 'TrendCharts',
+  },
+
+])
+const onClickOutside = () => {
+  unref(popoverRef).popperRef?.delayHide?.()
+}
 const add = () => {
   router.push({ path: '/blog/ArticleEdit', query: { type: 'book' } })
 
 }
-const toMain = () => {
+const toMain = (val) => {
   router.push({ path: '/MainPage', query: { type: 'tomain' } })
 
 }
@@ -71,6 +112,22 @@ const toHome = () => {
       background-size: cover;
       background-repeat: no-repeat;
     }
+  }
+
+}
+
+::v-deep.use-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 3px;
+  cursor: pointer;
+  &:hover{
+    color: #19b1f5;
+  }
+
+  .description {
+    margin-left: 5px;
   }
 }
 </style>

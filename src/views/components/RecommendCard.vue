@@ -47,6 +47,11 @@ const topList = reactive([
   height: 300px;
   padding: 0 16px 0 16px;
   background-color: #fff;
+  border-left: 1px solid #DADCE0;
+
+  .el-divider--horizontal {
+    margin: 0;
+  }
 
   .aside-box {
     ul {
