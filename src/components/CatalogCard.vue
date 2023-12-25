@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-10-09 15:41:07
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-19 18:10:12
+ * @LastEditTime: 2023-12-22 16:41:06
  * @FilePath: \myblog\src\components\CatalogCard.vue
  * @Description: 
  * 
@@ -199,8 +199,8 @@ onMounted(() => {
 .catalog-card {
   background: white;
   border-left: 1px solid #DADCE0;
-  padding: 20px 24px;
-  width: 100%;
+  padding: 10px 16px;
+  width: calc(100% - 10px);
 }
 
 .catalog-card-header {
