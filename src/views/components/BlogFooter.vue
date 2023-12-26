@@ -3,9 +3,14 @@
         <el-divider>
             <el-icon><star-filled /></el-icon>
         </el-divider>
-        <div>联系我们（工作时间：10:30-17:00）</div>
-        <div>鄂ICP备2023013882号</div>
-        <div>访问量：1</div>
+        <ul class="footer-ul">
+            <li>联系我们</li>
+            <li>工作时间：10:30-17:00</li>
+            <li>鄂ICP备2023013882号</li>
+            <li>访问总量：1</li>
+            <li></li>
+        </ul>
+
     </div>
 </template>
 
@@ -23,6 +28,14 @@
 
     .el-divider--horizontal {
         margin: 0;
+    }
+}
+
+.footer-ul {
+    padding: 0;
+    margin-top: 10px;
+    li {
+        list-style: none;
     }
 }
 </style>

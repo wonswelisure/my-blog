@@ -111,6 +111,11 @@ const toHome = () => {
       background-image: url('@/assets/image/wosls.jpg');
       background-size: cover;
       background-repeat: no-repeat;
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid #19b1f5
+      }
     }
   }
 
@@ -122,7 +127,8 @@ const toHome = () => {
   align-items: center;
   padding: 5px 3px;
   cursor: pointer;
-  &:hover{
+
+  &:hover {
     color: #19b1f5;
   }
 
