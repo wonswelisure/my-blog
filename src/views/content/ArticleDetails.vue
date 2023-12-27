@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-09-20 16:50:44
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-20 16:52:03
+ * @LastEditTime: 2023-12-27 16:40:32
  * @FilePath: \myblog\src\views\content\ArticleDetails.vue
  * @Description: 
  * 
@@ -11,7 +11,7 @@
 <template>
   <div id="article-details">
     <blog-header></blog-header>
-    <div class="container">
+    <div class="main-container">
       <!-- 文章内容 -->
       <div class="post-body">
         <div class="article-content" v-html="articleDetails.content"></div>
@@ -249,7 +249,7 @@ onMounted(() => {
   position: absolute;
 }
 
-.container {
+.main-container {
   display: flex;
   justify-content: space-between;
 }

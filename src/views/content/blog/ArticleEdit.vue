@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-12-19 15:33:52
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-25 15:16:13
+ * @LastEditTime: 2023-12-26 18:03:43
  * @FilePath: \myblog\src\views\content\blog\ArticleEdit.vue
  * @Description: 
  * 
@@ -21,7 +21,6 @@
                             <DocumentCopy />
                         </el-icon>
                     </el-button>
-
                 </template>
             </mavon-editor>
         </div>
