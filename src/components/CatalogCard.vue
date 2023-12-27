@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-10-09 15:41:07
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-22 16:41:06
+ * @LastEditTime: 2023-12-27 16:42:08
  * @FilePath: \myblog\src\components\CatalogCard.vue
  * @Description: 
  * 
@@ -19,7 +19,7 @@
                 /></span> -->
         <span>大纲</span>
       </div>
-      <span class="progress">{{ progress }}</span>
+      <span class="catalog-progress">{{ progress }}</span>
     </div>
 
     <div class="catalog-content">
@@ -222,7 +222,7 @@ onMounted(() => {
   color: var(--text-color);
 }
 
-.progress {
+.catalog-progress {
   color: #a9a9a9;
   font-style: italic;
   font-size: 140%;

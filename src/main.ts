@@ -26,6 +26,9 @@ import "element-plus/dist/index.css";
 // 导入 element-plus 图标
 import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 import mavonEditor from "mavon-editor";
+
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 // // 导入全局样式
 // import "@/styles/index.scss";
 // 创建 vue 实例

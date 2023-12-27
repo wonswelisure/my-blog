@@ -59,9 +59,17 @@ const add = () => {
   router.push({ path: '/blog/ArticleEdit', query: { type: 'book' } })
 
 }
-const toMain = (val) => {
-  router.push({ path: '/MainPage', query: { type: 'tomain' } })
-
+/**
+ * @description: 头像的单击事件
+ * @param {*} val
+ * @return {*}
+ */
+const toMain = (val: any) => {
+  if (val === 'center') {
+    router.push({ path: '/wosls/about', query: { type: 'tomain' } })
+  } else {
+    router.push({ path: '/MainPage', query: { type: 'tomain' } })
+  }
 }
 const toHome = () => {
   router.push({ path: '/blog/ArticleList', query: { type: 'tohome' } })
@@ -78,7 +86,7 @@ const toHome = () => {
   border-bottom: 1px solid #DADCE0;
   display: flex;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 0;
   background-image: radial-gradient(transparent 1px, #FFF 1px);
   background-size: 4px 4px;
