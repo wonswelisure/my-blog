@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-12-19 15:33:52
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-26 18:03:43
+ * @LastEditTime: 2023-12-27 18:37:34
  * @FilePath: \myblog\src\views\content\blog\ArticleEdit.vue
  * @Description: 
  * 
@@ -19,6 +19,7 @@
                     <el-button type="text" @click="dialogVisible = true" aria-hidden="true" class="op-icon fa" title="使用模板">
                         <el-icon :size="16" color="#757575">
                             <DocumentCopy />
+                            
                         </el-icon>
                     </el-button>
                 </template>
@@ -99,7 +100,8 @@ onMounted(() => { })
 .mavonEditor {
     width: 100%;
     height: calc(100% - 70px);
-
+    position:absolute;
+    top:70px;
     ::v-deep(.markdown-body) {
         height: 100% !important;
         box-shadow: none !important;
