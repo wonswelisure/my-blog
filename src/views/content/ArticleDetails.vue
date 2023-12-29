@@ -2,7 +2,7 @@
  * @Author: wosls
  * @Date: 2023-09-20 16:50:44
  * @LastEditors: wosls
- * @LastEditTime: 2023-12-27 16:40:32
+ * @LastEditTime: 2023-12-28 16:38:57
  * @FilePath: \myblog\src\views\content\ArticleDetails.vue
  * @Description: 
  * 
@@ -10,8 +10,13 @@
 -->
 <template>
   <div id="article-details">
+
     <blog-header></blog-header>
     <div class="main-container">
+      <side-bar>
+        <catalog-content></catalog-content>
+      </side-bar>
+
       <!-- 文章内容 -->
       <div class="post-body">
         <div class="article-content" v-html="articleDetails.content"></div>
@@ -40,6 +45,7 @@ import CommentContent from '../components/CommentContent.vue'
 import ToTop from '../components/ToTop.vue'
 import SideBar from '../components/SideBar.vue'
 import { renderByMathjax, initMathJax } from '../../utils/mathjax'
+import CatalogContent from '../components/CatalogContent.vue'
 // import buildCodeBlock from "../../utils/code-block";
 const articleDetails = reactive({
   createTime: '',
@@ -264,5 +270,9 @@ onMounted(() => {
 .post-body {
   width: calc(75% - 20px);
   padding: 0 20px 0 50px;
+
+  .article-content {
+    margin-top: 90px;
+  }
 }
 </style>
